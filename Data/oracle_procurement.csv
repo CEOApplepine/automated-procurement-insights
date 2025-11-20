@@ -1,0 +1,5 @@
+PO_ID,Supplier,Category,Amount,Order_Date,Contract_ID
+1001,ABC Ltd,Maintenance,5000,2025-01-15,C001
+1002,XYZ Inc,Logistics,3000,2025-01-20,C002
+1003,LMN Co,Maintenance,4500,2025-01-22,C003
+1004,DEF Ltd,Logistics,2500,2025-01-25,C004
