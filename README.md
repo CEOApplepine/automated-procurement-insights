@@ -1,48 +1,53 @@
-# automated-procurement-insights
-Python project demonstrating procurement and maintenance data analytics
-# Automated Procurement Data Insights
+# Automated Procurement Insights
 
 ## Overview
-This project demonstrates automated procurement and maintenance data analytics using Python. It integrates **Oracle Fusion procurement data** and **Maximo maintenance data**, performs spend and supplier analysis, and generates actionable reports.  
+This project demonstrates automated procurement and maintenance data analytics using Python. It integrates **Oracle Fusion procurement data** and **Maximo maintenance data**, performs spend and supplier analysis, and generates actionable reports and dashboards.  
 
-It is designed to showcase key skills for a **Sourcing & Analytics Specialist** role, including data integration, Python automation, KPI tracking, and preparing data for dashboards like Power BI.
+It is designed to showcase skills relevant for **Sourcing & Analytics Specialist / Procurement Analyst** roles, including data integration, KPI tracking, automation, process standardization, and supporting full-cycle sourcing decisions.
 
 ---
 
 ## Features
-- Merge procurement and maintenance datasets
-- Calculate total spend, supplier spend, and category spend
-- Generate CSV reports for easy visualization
-- Ready for integration with Power BI or Excel dashboards
-- Lightweight and runnable on iPad, PC, or Mac
+- Merge procurement and maintenance datasets (Oracle Fusion + Maximo)  
+- Calculate total spend, supplier spend, category spend, and maintenance %  
+- Track KPIs: PO count, average spend per PO, supplier performance  
+- Simulate contract creation and mapping in Oracle Fusion  
+- Full RFP process simulation: supplier ranking based on cost, reliability, and maintenance  
+- Generate Excel reports ready for dashboards  
+- Multiple visualizations:  
+  - Supplier Spend (Bar Chart)  
+  - Category Spend (Pie Chart)  
+  - Procurement vs Maintenance Spend (Bar Chart)  
+  - Maintenance % per Supplier (Bar Chart)  
+  - Monthly Spend Trend (Line Chart)  
+- Workflow designed for extendability: punchout/catalog integration, ARO shared services opportunities  
+- Lightweight and runnable on Google Colab, PC, or Mac  
 
 ---
 
 ## Folder Structure
-
 automated-procurement-insights/
-├── data/                  # Sample input data (procurement + maintenance)
-├── scripts/               # Python analytics script
-├── reports/               # Generated CSV reports
+├── Data/                  # Input CSVs (Oracle + Maximo)
+├── Scripts/               # Python analytics script
+├── Notebooks/             # Optional: exploratory analysis
+├── Reports/               # Generated Excel reports
+├── Visuals/               # Generated charts (PNG)
 └── README.md              # Project documentation
-
----
-
-## Sample Data
-**Oracle Procurement Data (`oracle_procurement.csv`)**
-| PO_ID | Supplier | Category | Amount | Order_Date | Contract_ID |
-|-------|---------|----------|--------|------------|------------|
-| 1001  | ABC Ltd | Maintenance | 5000 | 2025-01-15 | C001 |
-
-**Maximo Maintenance Data (`maximo_maintenance.csv`)**
-| Asset_ID | Work_Order_ID | Maintenance_Cost | Date | PO_ID |
-|----------|---------------|-----------------|------|-------|
-| A01      | WO001         | 2000            | 2025-01-20 | 1001 |
 
 ---
 
 ## Usage Instructions
 
-### Step 1: Run the Python Script
+### Google Colab
+1. Open a new notebook in [Google Colab](https://colab.research.google.com)  
+2. Copy the `procurement_analytics.py` code into a cell  
+3. Run the cell  
+4. Outputs:  
+   - Excel reports saved in `Reports/`  
+   - Charts saved in `Visuals/`  
+
+### Local Python
+1. Install dependencies:
 ```bash
-python scripts/procurement_analytics.py
+pip install pandas matplotlib openpyxl
+
